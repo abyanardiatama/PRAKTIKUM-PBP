@@ -1,0 +1,116 @@
+<!--Abyan Ardiatama-->
+<!--24060120140161-->
+<!--Praktikum PBP B2-->
+<!--Form Tambah Data Produk-->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Form Tambah Data Produk </title>
+    <script defer src="js_validation_24060120140161.js"></script>
+</head>
+    <body>
+        <h2>
+            Form Tambah Data Produk   
+        </h2>
+<table>
+        <form>
+            <tr>
+                <td>
+                    Nama Produk
+                </td>
+                <td>
+                    <input type="text" name="nama" required minlength="5" maxlength="30">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Deskripsi Produk
+                </td>
+                <td>
+                    <textarea name="deskripsi" required minlength="5" maxlength="100" id="" cols="20" rows="5"></textarea>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Kategori
+                </td>
+                <td>
+                    <select name="kategori" id="kategori" required onchange="createSubcategory()">
+                        <option value="" selected disabled hidden>--Pilih Kategori--</option>
+                        <option value="baju">Baju</option>
+                        <option value="elektronik">Elektronik</option>
+                        <option value="alat-tulis">Alat Tulis</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Sub Kategori
+                </td>
+                <td>
+                    <select name="sub-kategori" id="sub-kategori" required>
+                        <option value="" selected disabled hidden>--Pilih Sub Kategori--</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Harga Satuan
+                </td>
+                <td>
+                    <input type="number" min="0" required name="harga-satuan" id="">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Grosir
+                </td>
+                <td>
+                    <input type="radio" name="grosir" id="grosir-y" onchange="validateGrosir()" value="y"> Ya <br>
+                    <input type="radio" name="grosir" id="grosir-n" onchange="validateGrosir()" value="n"> Tidak
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Harga Grosir
+                </td>
+                <td>
+                    <input type="number" min="0" required name="harga-grosir" id="harga-grosir" disabled>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Jasa Kirim
+                </td>
+                <td>
+                    <div id="checkboxgroup">
+                    <input type="checkbox" name="" id="" class="jaskir" onchange="jasaKirim()" value="jne"> JNE <br>
+                    <input type="checkbox" name="" id="" class="jaskir" onchange="jasaKirim()" value="tiki"> TIKI <br>
+                    <input type="checkbox" name="" id="" class="jaskir" onchange="jasaKirim()" value="sicepat"> Si Cepat <br>
+                    <input type="checkbox" name="" id="" class="jaskir" onchange="jasaKirim()" value="ninja"> Ninja Express <br>
+                    <input type="checkbox" name="" id="" class="jaskir" onchange="jasaKirim()" value="wahana"> Wahana
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Captcha
+                </td>
+                <td>
+                    <input type="text" name="" disabled id="captcha" size="7">
+                    <input type="text" name="answer" id="captcha-answer" size="7">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="submit" value="Submit">
+                    <input type="reset" value="Reset">
+                </td>    
+            </tr>
+        </form>
+</table>
+    </body>
+</html>  
